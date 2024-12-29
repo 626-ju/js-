@@ -229,6 +229,6 @@
                => 원시타입의 데이터에도 연관 객체의 메서드를 사용기 위해
 
              const str= 'hi';
-             clg(str.length); //str을 래퍼객체 String의 인스턴스로 변환 후 메서드 사용
+             clg(str.length); //str을 래퍼객체 String의 인스턴스로 변환 후 메서드 사용(이후 래퍼객체는 가비지 콜렉션 대상)
              clg(typeof str); //String이 나옴( 다시 원시 값으로 되돌림)
                               //str을 new String()을 통해 생성했으면 object가 나왔을 터
