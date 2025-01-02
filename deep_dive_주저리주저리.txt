@@ -305,7 +305,31 @@
 	- super() 호출 이전에 서브클래스에서 this로 수퍼클래스의 프로퍼티 접근 불가
         - constructor 안에서만 super() 호출 가능
 
-39-2)	- super.메서드이름() : 수퍼클래스의 프로토타입메서드를 가리킴
+39-2)	- super.메서드이름() : 수퍼클래스의 메서드를 가리킴
 	- [[HomeObject]]내부슬롯을 가진 함수만이 super로 참조 가능
   	   => 메서드 축약 표현으로 정의한 함수만 [[HomeObject]] 가짐
         - 서브클래스의 정적 메서드 내에서 사용된 super는 수퍼(부모)클래스의 정적메서드를 가리킴
+
+
+40. 클래스를 평가할 때 [[ConstructorKind]] 내부 슬롯을 통해 수퍼클래스와 서브클래스의 동작을 구분
+    - [[ConstructorKind]] base : 다른 클래스를 상속받지 않는 클래스 => new 연산자와 호출 시  빈객체 생성 후 this에 바인딩
+    - [[ConstructorKind]] derived : 파생된, 상속받은 클래스 => 인스턴스의 생성을 수퍼클래스에 위임 => super()를 반드시 호출해야하는 이유
+
+      ** 서브 클래스에서 constructor 자체를 아예 생략해버리는 경우가 있는데 사실은 다음이 생략된 것과 같다
+        (생략되지만 사실 다음과 같이 호출되고 있음)
+      /*
+	constructor(...arg){
+	     super(...arg);
+	 }
+      */
+
+41.  #을 통해 접근저에자 private를 비슷하게 흉내낼 수 있다
+
+     class Person{
+ 	#name= '';		//constructor 밖에 선언해줘야함
+        constructor(name){
+		this.#name = name;
+ 	}
+     }
+
+  
