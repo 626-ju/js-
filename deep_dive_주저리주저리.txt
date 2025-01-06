@@ -461,3 +461,9 @@
 	    clg(arr[Symbol.iterator]().next());   //{value:undefined, done:true}
 
       ※ 즉 이터러블 객체를 순회하기 위한 포인터 역할을 한다.
+
+<1/6>
+
+59. 스프레드 연산자 ... 의 결과는 값x
+    =>변수에 할당 불가
+
