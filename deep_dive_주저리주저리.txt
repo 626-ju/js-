@@ -565,7 +565,7 @@
 
 
 - .insertAdajacentHtml()
-  => 요소 
+  => 첫번째인수로 'beforebegin', 'afterbegin', 'beforeend', 'afterend'등을 전달 받아 해당 위치에 삽입 (html마크업 파싱o)
 
 - 이미 존재하는 요소를 다시 append해주면 이동된다??(맞음?)
 - .insertBefore(newNode, childNonde) : append, prepend 말고 2번쨰 인수로 지정한 노드 앞에 요소 추가
