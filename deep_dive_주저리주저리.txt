@@ -553,9 +553,19 @@
 
 67. 여러가지 DOM 조작 API
 
-- .innerHtml() , .textContent(), .nodeValue()
+- 요소 내 텍스트노드 조작
+   1) .innerHtml() :  html마크업 포함해서 반환 근데 파싱o 
+   2) .textContent() : html마크업 안 가져옴. 파싱x  선택된 요소의 하위 텍스트까지 전부 다 긁어옴 숨겨진 것까지 (텍스트만, 마크업x)
+   3) .nodeValue() :  요소노드.nodeValue()는 null, 텍스트요소.nodeValue()에서 원하는 텍스트가 나옴
+                     요소.firstChild(텍스트노드).nodeValue()처럼 사용
+
+   4) .innerText() : textContent()와 비슷. 텍스트만 가져오는데 css에 순종적이라 숨겨진 건 안 가져옴
+                     +렌더링되는 텍스트만 가져옴
+ 
+
 
 - .insertAdajacentHtml()
+  => 요소 
 
 - 이미 존재하는 요소를 다시 append해주면 이동된다??(맞음?)
 - .insertBefore(newNode, childNonde) : append, prepend 말고 2번쨰 인수로 지정한 노드 앞에 요소 추가
