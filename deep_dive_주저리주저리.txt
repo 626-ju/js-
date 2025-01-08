@@ -533,4 +533,36 @@
 
      +> js 파싱 : css파싱 과정처럼  AST(추상구문트리 생성)  => 인터프리터가 실행할 수 있는 바이트코드 변환 및 실행
      =====> DOM API 혹은 		
-          
+
+
+64. DOM트리를 구성하는 노드들 역시 js의 객체이기 때문에 (브라우저에서 제공하는 호스트 객체)
+    =>프로토타입에 의한 상속구조를 가짐 + DOM API를 통해 조작이 가능하다
+
+
+65. 복수의 요소를 취득하는 .getElementByClassName(), .getElementsByTagName()은 
+    => '콜렉션객체' (유사배열+이터러블)을 반환함
+    ==> 이 콜렉션 객체는 '실시간'반영 => 반복문을 돌던 도중 변경이 일어나면 바로 반영되니 주의
+
+    **그래서 콜렉션 객체를 배열로 한번 변환해서 사용하는 것이 간단함  => [...콜렉션객체] 혹은 Array.from()
+
+
+66. 마찬가지로 복수의 요소를 취득하는  .querySelectorAll()은 
+    => '노드리스트'를 반환
+    ===> 기본적으로 'non-live'라서 콜렉션객체처럼 실시간 반영x
+
+
+67. 여러가지 DOM 조작 API
+
+- .innerHtml() , .textContent(), .nodeValue()
+
+- .insertAdajacentHtml()
+
+- 이미 존재하는 요소를 다시 append해주면 이동된다??(맞음?)
+- .insertBefore(newNode, childNonde) : append, prepend 말고 2번쨰 인수로 지정한 노드 앞에 요소 추가
+
+-.cloneNode() 요소 복사 
+  (인수로 true를 전달받으면 깊은 복사(자손까지 다 복사)  || 기본값 false 얕은 복사 (자손노드 복사x)
+
+- .replaceNode() 요소 교체
+- .removeChild() 요소 삭제
+
