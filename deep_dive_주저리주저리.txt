@@ -568,7 +568,7 @@
   => 첫번째인수로 'beforebegin', 'afterbegin', 'beforeend', 'afterend'등을 전달 받아 해당 위치에 삽입 (html마크업 파싱o)
 
 - 이미 존재하는 요소를 다시 append해주면 이동된다??(맞음?)
-- .insertBefore(newNode, childNonde) : append, prepend 말고 2번쨰 인수로 지정한 노드 앞에 요소 추가
+- .insertBefore(newNode, childNode) : append, prepend 말고 2번쨰 인수로 지정한 노드 앞에 요소 추가
 
 -.cloneNode() 요소 복사 
   (인수로 true를 전달받으면 깊은 복사(자손까지 다 복사)  || 기본값 false 얕은 복사 (자손노드 복사x)
