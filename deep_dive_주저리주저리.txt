@@ -706,4 +706,17 @@
 	}
        }
 
+
 87. REST API
+         REST(Representational State Transfer) 
+         : HTTP의 장점을 잘 활용할 수 있게 '클라이언트가 서버의 리소스에 접근하는 방식을 규정한 아키텍처'
+
+          ==> REST API : REST를 기반으로 서비스 API를 구현한 것
+
+	  3요소) 자원(URI 사용), 행위(HTTP요청메서드 사용), 표현(페이로드 사용)
+   	  HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고,
+	  HTTP Method(POST, GET, PUT, DELETE, PATCH 등)를 통해 자원에 대한 행위를 명시하고,
+          payload를 통해 자원에 대한 행위의 구처적 내용을 명시하자
+
+
+       
