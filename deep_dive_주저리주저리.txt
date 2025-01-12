@@ -747,6 +747,9 @@
 
 92.프로미스 객체의 정적 메서드
 
-   1) Promise.resolve() :인수로 전달 받은 값을 프로미스의 resolve로
-   2) Promise.reject() : 둘 다 이미 존재하는 값들을 래핑해 프로미스
+   1) Promise.resolve() :인수로 전달 받은 값을 래핑해 fulfilled 상태의 프로미스 반환
+   2) Promise.reject() : 인수로 전달 받은 값을 래핑해 rejected 상태의 프로미스 반환
+      // 둘 다 프로미스를 인수로 받으면 프로미스 그대로 뱉음
 
+  3) Promise.all()
+  4) Promise.race() : .all과 비슷한데 제일 먼저 fulfilled된 프로미스만 반환
