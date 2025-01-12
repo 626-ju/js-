@@ -752,4 +752,4 @@
       // 둘 다 프로미스를 인수로 받으면 프로미스 그대로 뱉음
 
   3) Promise.all()
-  4) Promise.race() : .all과 비슷한데 제일 먼저 fulfilled된 프로미스만 반환
+  4) Promise.race() : .all과 비슷한데 제일 먼저 fulfilled된 프로미스만 새로운 프로미스로 반환
