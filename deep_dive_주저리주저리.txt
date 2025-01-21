@@ -520,13 +520,13 @@
 63. 클라이언트단에서 http 요청
      => html, css, js, img 등 리소스를 받음
      ==> html 파싱 : DOM 트리 생성 (생성 중 <link> 혹은 <style> , <script> 태그 만나서 외부 css js 호출하면 일시정지)
-     ===> css 파싱 : CSSOM트리 생성 (만들고 다시 나가서 html 이어서 해석 및 DOM 생서 재개)
+     ===> css 파싱 : CSSOM트리 생성 (만들고 다시 나가서 html 이어서 해석 및 DOM 생성 재개)
 
      ====> DOM + CSSOM 합쳐서 랜더 트리 생성(화면에 렌더링 되지 않는 노드는 표시x)
 
      ** 레이아웃이 추후에 변경되면 ex) 1) js DOM API 사용(노드 동적 추가 및 삭제)
-				     2) 뷰포트에 따른 가변형
-				     3) 레이아웃 변경 ex) margin, padding, display, position 등
+				2) 뷰포트에 따른 가변형
+				3) 레이아웃 변경 ex) margin, padding, display, position 등
 
 	=>리렌더링 발생 :  DOM, CSSOM 변경(리플로우) + 다시 렌더 트리로 결합(리페인팅) 
 
@@ -719,7 +719,7 @@
 	  3요소) 자원(URI 사용), 행위(HTTP요청메서드 사용), 표현(페이로드 사용)
    	  HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고,
 	  HTTP Method(POST, GET, PUT, DELETE, PATCH 등)를 통해 자원에 대한 행위를 명시하고,
-          payload를 통해 자원에 대한 행위의 구처적 내용을 명시하자
+          payload를 통해 자원에 대한 행위의 구체적 내용을 명시하자
 
 
 88. 일반적인 비동기처리는 처리결과를 외부로 반환하거나  상위 스코프의 변수에 할당할 수가 없음
@@ -730,7 +730,7 @@
 
 
 89. 프로미스 객체 :  비동기 처리 상태와 처리결과를 관리하는 객체 
-		    비동기 처리를 수행할 콜백함수를 인수로 받음 (resolve, reject)
+		  비동기 처리를 수행할 콜백함수를 인수로 받음 (resolve, reject)
 
 90. 프로미스의 상태정보
      pending           ->  settled :  resolve함수를 호출하면fullfiled
@@ -806,7 +806,7 @@
 
      - async : async 함수를 정의, 언제나 프로미스 반환
      - await : 반드시 async 함수 내부에서만, 프로미스 앞에서만 사용.
-               프모리스가 settled 상태가 될 때까지 대기하다가 settled되면 프로미스가 resolve한 처리결과를 반환
+               프로미스가 settled 상태가 될 때까지 대기하다가 settled되면 프로미스가 resolve한 처리결과를 반환
 
     **앞선 비동기처리의 결과를 가지고 다음 비동기 처리를 수행해야할 때,
       await를 써서 비동기처리 순서를 보장하는 것이 편리하다
