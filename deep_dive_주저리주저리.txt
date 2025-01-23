@@ -584,8 +584,8 @@
 69. data어트리뷰트 
      data-이름 : data-index, data-user-id처럼 사용자 정의 어트리뷰트
                 => .dataset.카멜케이스로 값을 취득하거나 변경 가능
-		   ex) $li.datasetIndex ==='1' ? clg('1') : clg('2') ;
-     
+		   ex) $li.dataset.index ==='1' ? clg('1') : clg('2') ;
+     		       (미지원일 경우 .getAttribute('data-index')로 접근)
 
 70. 이벤트 핸들러 : 이벤트가 발생했을 때 호출되는 함수
 
