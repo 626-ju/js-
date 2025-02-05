@@ -553,12 +553,12 @@
 67. 여러가지 DOM 조작 API
 
 - 요소 내 텍스트노드 조작
-   1) .innerHtml() :  html마크업 포함해서 반환 근데 파싱o 
-   2) .textContent() : html마크업 안 가져옴. 파싱x  선택된 요소의 하위 텍스트까지 전부 다 긁어옴 숨겨진 것까지 (텍스트만, 마크업x)
-   3) .nodeValue() :  요소노드.nodeValue()는 null, 텍스트요소.nodeValue()에서 원하는 텍스트가 나옴
+   1) .innerHtml :  html마크업 포함해서 반환 근데 파싱o 
+   2) .textContent : html마크업 안 가져옴. 파싱x  선택된 요소의 하위 텍스트까지 전부 다 긁어옴 숨겨진 것까지 (텍스트만, 마크업x)
+   3) .nodeValue :  요소노드.nodeValue()는 null, 텍스트요소.nodeValue()에서 원하는 텍스트가 나옴
                      요소.firstChild(텍스트노드).nodeValue()처럼 사용
 
-   4) .innerText() : textContent()와 비슷. 텍스트만 가져오는데 css에 순종적이라 숨겨진 건 안 가져옴
+   4) .innerText : textContent()와 비슷. 텍스트만 가져오는데 css에 순종적이라 숨겨진 건 안 가져옴
                      +렌더링되는 텍스트만 가져옴
  
 
