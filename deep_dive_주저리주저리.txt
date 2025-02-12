@@ -767,6 +767,7 @@
 
 94. fetch() : 응답을 나타내는 Response객체를
               자체적으로 프로미스로 래핑 후 반환해 더 편리하게 요청처리를 할 수 있음.
+	      //네트워크 에러 시에만 reject/ 상태코드 404,500도 resolve()로 반환함
 
     ex).  const promise = fetch('uri', {
 		             method : 'POST',
