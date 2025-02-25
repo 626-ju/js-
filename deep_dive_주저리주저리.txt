@@ -679,13 +679,15 @@
            -> 응답한 데이터를 수신해 웹페이지를 동적으로 갱신
            ==> XMLHttpRequest를 기반으로 동작
     XMLHttpRequest객체 : form태그를 통한 http요청이 아닌 js를 사용해 요청을 보내고 싶을 때 사용 
-    
+
+
 84. 요청 처리 과정
      1) const xhr = new XMLHttpRequest();  			   //XMLHttpRequest객체 생성
      2) xhr.open('GET', 'url'); 	    			   //Http 요청 초기화
      3) xhr.setRequestHeader('content-type', 'application/json');  //Http 요청 헤더 설정, 반드시 open메서드 이후에 사용
 								   //페이로드(데이터)의 MIME타입 지정을 주로 한다고 함
      4) xhr.send('페이로드'); 					   //Http 요청 전송
+
 
 85. 요청 메서드 
     1) GET    : 리소스 취득   , 페이로드x
