@@ -20,7 +20,7 @@
 	4) null    : null의 typeof는 object이다
         5) NaN
         6) false
-		         
+		           
 
 6.  js에서  var 변수는 선언 시 undefined로 초기화 
     선언과 동시에 값을 할당한다고 그 값으로 초기화 되는 것이 아니다
